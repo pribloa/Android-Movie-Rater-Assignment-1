@@ -69,7 +69,7 @@ class MovieRaterApplication : Application() {
                 val releaseDate = jsonObject.getString("release_date")
                 var rating = jsonObject.getString("rating")
                 val parts = rating.split("/")
-                if (parts.size > 2)
+                if (parts.size >= 2)
                     rating = parts[0]
                 else
                     rating = "0"
