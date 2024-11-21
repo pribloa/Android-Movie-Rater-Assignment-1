@@ -6,6 +6,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.outlined.AddCircle
 import androidx.compose.material3.* //
 import androidx.compose.runtime.*
 import androidx.compose.ui.res.painterResource //
@@ -16,6 +18,7 @@ import androidx.compose.ui.graphics.*
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -68,7 +71,7 @@ fun LoginScreen(onLogin: (String, String) -> Unit, onRegister: () -> Unit) {
                 trailingIcon = {
                     IconButton(onClick = { isPasswordVisible = !isPasswordVisible }) {
                         Icon(
-                            imageVector = if (isPasswordVisible) Icons.Default.Visibility  else Icons.Default.VisibilityOff ,
+                            imageVector = if (isPasswordVisible) Icons.Outlined.AddCircle  else Icons.Filled.AddCircle ,
                             contentDescription = if (isPasswordVisible) "Hide password" else "Show password"
                         )
                     }
